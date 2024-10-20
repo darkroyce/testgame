@@ -1,13 +1,71 @@
-<style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        background-color: #f0f0f0;
-        color: #333;
-        font-family: Arial, sans-serif;
-    }
-    #game-container {
-        padding: 20px;
-    }
-</style>
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+#game-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 4px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.progress {
+    background-color: #4CAF50;
+    height: 100%;
+    border-radius: 4px;
+    width: 0%;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.game-map {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.map-tile {
+    aspect-ratio: 1;
+    border: 1px solid #000;
+}
+
+.map-tile.town { background-color: #808080; }
+.map-tile.forest { background-color: #228B22; }
+.map-tile.mountains { background-color: #8B4513; }
+.map-tile.lake { background-color: #1E90FF; }
+.map-tile.player::after {
+    content: '🧙';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;
+}
