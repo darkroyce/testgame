@@ -5,20 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Monster Hunter's Quest</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="game-container">
         <h1>Monster Hunter's Quest</h1>
-        <p>If you see this, HTML is loading correctly.</p>
+        <p>Loading game...</p>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (window.Telegram && window.Telegram.WebApp) {
-                document.getElementById('game-container').innerHTML += '<p>Telegram WebApp is available.</p>';
-            } else {
-                document.getElementById('game-container').innerHTML += '<p>Telegram WebApp is NOT available.</p>';
-            }
-        });
-    </script>
+    <script src="game.js"></script>
 </body>
 </html>
